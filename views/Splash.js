@@ -33,7 +33,7 @@ const Splash = ({ navigation }) => {
                 <View style={styles.vista}>
                     <Animated.Image
                         style={[{ opacity: animacionLogo }, styles.imagenArriba]}
-                        source={require('../mcaf-logo-top.png')}
+                        source={require('../logoSplash.png')}
                     />
                 </View>
                 <View style={styles.rueda}>

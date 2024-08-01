@@ -1,0 +1,20 @@
+{
+    "data": {
+        "data": {
+            "apellido": "Volpe",
+            "com_razon_social": "",
+            "email": "mvolpe@gruponeosistemas.com",
+            "encontrado": 1,
+            "es_comercio": 0,
+            "es_usuario": 0,
+            "estado_comercio": "",
+            "estado_socio": "A",
+            "nombre": "Matias",
+            "nro_persona": 103,
+            "numero_comercio": 0,
+            "telefono_celular": "3412115087"
+        },
+        "error": "",
+        "success": "TRUE"
+    }
+}

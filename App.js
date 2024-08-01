@@ -41,13 +41,14 @@ const App = () => {
       try {
         await AsyncStorage.setItem('id_mutual', '6');
         await AsyncStorage.setItem('id_sucursal', '1');
-        await AsyncStorage.setItem('url_traductor', 'asdadsadsa');
+        await AsyncStorage.setItem('url_traductor', 'https://traductor.gruponeosistemas.com/n_hbconfig');
+        await AsyncStorage.setItem('url_sms', 'https://billetera.gruponeosistemas.com/sms');
       }
       catch {
         console.error(error);
       }
-      datosMutual();
     }
+    datosMutual();
   }, [])
 
   return (
@@ -91,14 +92,25 @@ const App = () => {
           <Stack.Screen
             name="CodigoSMS"
             component={CodigoSMS}
-          />
-          <Stack.Screen
-            name="EmailTemporal"
-            component={EmailTemporal}
+            options={{
+              headerStyle: {
+                backgroundColor: '#ddede7'
+              },
+              headerBackTitle: 'Atrás',
+              headerTitle: '',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 24
+              }
+            }}
           />
           <Stack.Screen
             name="NombreUsuario"
             component={NombreUsuario}
+          />
+          <Stack.Screen
+            name="EmailTemporal"
+            component={EmailTemporal}
           />
           <Stack.Screen
             name="CambiarContraseña"

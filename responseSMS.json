@@ -1,0 +1,110 @@
+{
+    "config": {
+        "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+        ],
+        "data": "{\"numero_celular\":\"+543412115087\",\"mensaje\":\"Este es un mensaje de la BILLETERA Mutual Central SC, código de verificación es 000000 \",\"categoria\":\"MutualCentralSC\",\"tipo\":1}",
+        "env": {
+            "Blob": [Function Blob
+            ],
+            "FormData": [Function FormData
+            ]
+        },
+        "headers": [Object
+        ],
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "https://billetera.gruponeosistemas.com/sms",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": "",
+    "headers": {
+        "cache-control": "no-cache, private",
+        "content-length": "0",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Thu, 01 Aug 2024 15:33:51 GMT",
+        "server": "Apache",
+        "set-cookie": [Array
+        ]
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "cache-control": "no-cache, private",
+            "content-length": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Thu, 01 Aug 2024 15:33:51 GMT",
+            "server": "Apache",
+            "set-cookie": "XSRF-TOKEN=eyJpdiI6IkNzajIrODB2ME84NGRYVGpZekN1bFE9PSIsInZhbHVlIjoidmEvTVhCcWZVbVlXMTBtSE5ZNVNuTG84Y0U4Qi9BYUNjZWdIcE5sL2ZVOUJ4Rm5QT2I1WmNTVUNJUnE5ejFPOFV1Tll2SzY1V3Blb2ExSU9XMUJzY2pMNWh2Z2NrMFVkcnd3bG9WNWRZZVRWbUVrNGRnNC8rbEtxUEZ1N296N0EiLCJtYWMiOiIxMmY2NzRlOWI0MDUzOWE2NmFmNzlmNTEyZDZmOWRhZWRiMWFhODhmYWVhMTYyNDI2YjI4OTEyY2IyMmEzYTczIiwidGFnIjoiIn0%3D; expires=Thu, 01 Aug 2024 17:33:53 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6InU3eWlOeTM5Z2Z1dFZmYjJ5elc3a2c9PSIsInZhbHVlIjoiVnAyaStQajQvNHNNVlFPRjVxdlV5VDJZWTZHK3JZa3c4SUR3UnVFSHMwUjczTzgxWjJ3dkNQYWt1dmtsV05yTDREOHdhdkNsNlBTbWhnbjFvckVHN1FqMytFVGdiYy9qc2xhdWkyU0RTSVpaa1MwSWtMcVZYVFdLQXhIWXNmSHEiLCJtYWMiOiIyNjBlMjM1Mzc4YmRmOWNlZmFkOGU2YWNhZTM4NjcwYjkzODUzZWQwZTljNDJmZTlkZjhlMDYyY2I2YjY3ZmI2IiwidGFnIjoiIn0%3D; expires=Thu, 01 Aug 2024 17:33:53 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_https://billetera.gruponeosistemas.com/sms",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "https://billetera.gruponeosistemas.com/sms",
+        "readyState": 4,
+        "responseHeaders": {
+            "Cache-Control": "no-cache, private",
+            "Content-Length": "0",
+            "Content-Type": "text/html; charset=UTF-8",
+            "Date": "Thu, 01 Aug 2024 15:33:51 GMT",
+            "Server": "Apache",
+            "Set-Cookie": "XSRF-TOKEN=eyJpdiI6IkNzajIrODB2ME84NGRYVGpZekN1bFE9PSIsInZhbHVlIjoidmEvTVhCcWZVbVlXMTBtSE5ZNVNuTG84Y0U4Qi9BYUNjZWdIcE5sL2ZVOUJ4Rm5QT2I1WmNTVUNJUnE5ejFPOFV1Tll2SzY1V3Blb2ExSU9XMUJzY2pMNWh2Z2NrMFVkcnd3bG9WNWRZZVRWbUVrNGRnNC8rbEtxUEZ1N296N0EiLCJtYWMiOiIxMmY2NzRlOWI0MDUzOWE2NmFmNzlmNTEyZDZmOWRhZWRiMWFhODhmYWVhMTYyNDI2YjI4OTEyY2IyMmEzYTczIiwidGFnIjoiIn0%3D; expires=Thu, 01 Aug 2024 17:33:53 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6InU3eWlOeTM5Z2Z1dFZmYjJ5elc3a2c9PSIsInZhbHVlIjoiVnAyaStQajQvNHNNVlFPRjVxdlV5VDJZWTZHK3JZa3c4SUR3UnVFSHMwUjczTzgxWjJ3dkNQYWt1dmtsV05yTDREOHdhdkNsNlBTbWhnbjFvckVHN1FqMytFVGdiYy9qc2xhdWkyU0RTSVpaa1MwSWtMcVZYVFdLQXhIWXNmSHEiLCJtYWMiOiIyNjBlMjM1Mzc4YmRmOWNlZmFkOGU2YWNhZTM4NjcwYjkzODUzZWQwZTljNDJmZTlkZjhlMDYyY2I2YjY3ZmI2IiwidGFnIjoiIn0%3D; expires=Thu, 01 Aug 2024 17:33:53 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+        },
+        "responseURL": "https://billetera.gruponeosistemas.com/sms",
+        "status": 200,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 200,
+    "statusText": undefined
+}

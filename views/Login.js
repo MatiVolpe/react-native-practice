@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Animated } from 'react-native'
+import { StyleSheet, View, Animated, Image } from 'react-native'
 import { Button, HelperText, Text, TextInput } from 'react-native-paper'
 
 const Login = ({navigation}) => {
@@ -81,7 +81,10 @@ const Login = ({navigation}) => {
     <View style={styles.contenedor}>
 
       <View style={styles.vistaTitulo}>
-        <Text style={styles.titulo} variant="headlineMedium">Iniciar Sesión</Text>
+        <Image 
+          source={require('../logoLogin.png')}
+          style={styles.imagen}
+        />
       </View>
 
 
@@ -164,8 +167,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   vistaTitulo: {
-    width: '90%',
-    marginTop: 20,
+    width: '100%',
+    height: '100%',
+    maxHeight: 250,
   },
   vista: {
     width: '90%',
@@ -177,7 +181,7 @@ const styles = StyleSheet.create({
 
   },
   texto: {
-    marginTop: 10,
+    
     fontWeight: '700',
   },
   boton: {
@@ -198,7 +202,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginTop: 10,
     borderRadius: 20,
-  }
+  },
+  imagen: {
+    width: '100%',
+    resizeMode: 'contain',
+    flex: 1,
+},
 }
 )
 
