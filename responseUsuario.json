@@ -1,0 +1,239 @@
+{
+    "config": {
+        "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+        ],
+        "data": "{\"encriptado\":\"NEOPOSTMAN\",\"id_mutual\":\"6\",\"id_sucursal\":\"1\",\"usuario\":\"Aia1421ts\",\"nro_persona\":\"\",\"correo\":\"\"}",
+        "env": {
+            "Blob": [Function Blob
+            ],
+            "FormData": [Function FormData
+            ]
+        },
+        "headers": [Object
+        ],
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "https://billetera.gruponeosistemas.com/registroUsuario",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": {
+        "error": "Falta campos para procesar la operación.",
+        "success": "TRUE"
+    },
+    "headers": {
+        "cache-control": "no-cache, private",
+        "content-encoding": "gzip",
+        "content-length": "91",
+        "content-type": "application/json",
+        "date": "Fri, 02 Aug 2024 13:54:27 GMT",
+        "server": "Apache",
+        "set-cookie": [Array
+        ],
+        "vary": "Accept-Encoding"
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "cache-control": "no-cache, private",
+            "content-encoding": "gzip",
+            "content-length": "91",
+            "content-type": "application/json",
+            "date": "Fri, 02 Aug 2024 13:54:27 GMT",
+            "server": "Apache",
+            "set-cookie": "XSRF-TOKEN=eyJpdiI6ImZhRDAzaFhJWm92cm9PMGdCVWFmY2c9PSIsInZhbHVlIjoiS1JuVEEyTHdOa0Zuc0x2Mk8zQmF2bmgrcGYzbnNFSk5SV3hZSmN2QmRuYVRFcUJlL2xlRk9xRTkybTN1czVSZWxIWUcvYjVpS3piTHZUcm9WNW1RcEpRdUQ1ekl2SXNnUnNTRlZYTzEyRzMwMm9pZ0F5L2lGWDhQUkdXNzdOOGEiLCJtYWMiOiJkNDJlZjVkMzdmNDAzMGMwZTdiNzY2MzZlODI5YzY4ZmY4M2NiYzk0ZGE5ODdiMmE4ZGM0MDRhOTRmMDhhYzgzIiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 15:54:27 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6Inl3TzNLMk14bzArRnF0V2ZmTXFQb2c9PSIsInZhbHVlIjoiQXFjS3FKOWNOZXErK3VvMU83bFg5U0Y4cHl6Y00xNU9LNVZKRDVVRUtWZi95MjZMalJReG9OUGlKZm44VDNPSXVQK3JpTEdnV21NdzRkSk0ydUY0VjJobGNhQzUrdUhEZlo2RzJtSVZuT2daTW9tc2lXWlVsMVViNStlTkRaL0IiLCJtYWMiOiI3MGY3MmI4N2FlZTc1MmNmZGIzZmJkZDRkMTQ3M2ViNDBkYjUzZTk4YjRiNzFkYjhhYjljMWVhNWM3ZTdhZmE2IiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 15:54:27 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+            "vary": "Accept-Encoding"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_https://billetera.gruponeosistemas.com/registroUsuario",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "{\"success\":\"TRUE\",\"error\":\"Falta campos para procesar la operaci\\u00f3n.\"}",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "https://billetera.gruponeosistemas.com/registroUsuario",
+        "readyState": 4,
+        "responseHeaders": {
+            "Cache-Control": "no-cache, private",
+            "Content-Encoding": "gzip",
+            "Content-Length": "91",
+            "Content-Type": "application/json",
+            "Date": "Fri, 02 Aug 2024 13:54:27 GMT",
+            "Server": "Apache",
+            "Set-Cookie": "XSRF-TOKEN=eyJpdiI6ImZhRDAzaFhJWm92cm9PMGdCVWFmY2c9PSIsInZhbHVlIjoiS1JuVEEyTHdOa0Zuc0x2Mk8zQmF2bmgrcGYzbnNFSk5SV3hZSmN2QmRuYVRFcUJlL2xlRk9xRTkybTN1czVSZWxIWUcvYjVpS3piTHZUcm9WNW1RcEpRdUQ1ekl2SXNnUnNTRlZYTzEyRzMwMm9pZ0F5L2lGWDhQUkdXNzdOOGEiLCJtYWMiOiJkNDJlZjVkMzdmNDAzMGMwZTdiNzY2MzZlODI5YzY4ZmY4M2NiYzk0ZGE5ODdiMmE4ZGM0MDRhOTRmMDhhYzgzIiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 15:54:27 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6Inl3TzNLMk14bzArRnF0V2ZmTXFQb2c9PSIsInZhbHVlIjoiQXFjS3FKOWNOZXErK3VvMU83bFg5U0Y4cHl6Y00xNU9LNVZKRDVVRUtWZi95MjZMalJReG9OUGlKZm44VDNPSXVQK3JpTEdnV21NdzRkSk0ydUY0VjJobGNhQzUrdUhEZlo2RzJtSVZuT2daTW9tc2lXWlVsMVViNStlTkRaL0IiLCJtYWMiOiI3MGY3MmI4N2FlZTc1MmNmZGIzZmJkZDRkMTQ3M2ViNDBkYjUzZTk4YjRiNzFkYjhhYjljMWVhNWM3ZTdhZmE2IiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 15:54:27 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+            "Vary": "Accept-Encoding"
+        },
+        "responseURL": "https://billetera.gruponeosistemas.com/registroUsuario",
+        "status": 200,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 200,
+    "statusText": undefined
+}
+
+{
+    "config": {
+        "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+        ],
+        "data": "{\"encriptado\":\"NEOPOSTMAN\",\"id_mutual\":\"6\",\"id_sucursal\":\"1\",\"usuario\":\"Matias1234\",\"nro_persona\":\"103\",\"correo\":\"mvolpe@gruponeosistemas.com\"}",
+        "env": {
+            "Blob": [Function Blob
+            ],
+            "FormData": [Function FormData
+            ]
+        },
+        "headers": [Object
+        ],
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "https://billetera.gruponeosistemas.com/registroUsuario",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": {
+        "mensaje": "El usuario Matias1234 con el nro de persona 103 fue actualizado con exito.",
+        "success": "TRUE"
+    },
+    "headers": {
+        "cache-control": "no-cache, private",
+        "content-encoding": "gzip",
+        "content-length": "116",
+        "content-type": "application/json",
+        "date": "Fri, 02 Aug 2024 14:28:14 GMT",
+        "server": "Apache",
+        "set-cookie": [Array
+        ],
+        "vary": "Accept-Encoding"
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "cache-control": "no-cache, private",
+            "content-encoding": "gzip",
+            "content-length": "116",
+            "content-type": "application/json",
+            "date": "Fri, 02 Aug 2024 14:28:14 GMT",
+            "server": "Apache",
+            "set-cookie": "XSRF-TOKEN=eyJpdiI6IlY4WHJLRVVqWVY2b3FRNmluOHhDbUE9PSIsInZhbHVlIjoiMW96NUt3aTEwc0FQWUlLZW9kTHdBRmZXSW1TZks5Mi9FeFhEVXRkSVpZY1VLTS8xd0NzaWQxQW1qa09RVkQvMVY0dDIwSUxreFh3NFMvbStta1R0dlg2K2l2QXEvRlhoVHBHTk82ditlTEVKWGpHNXRLVEFxT0Q1L2pmbjFsaksiLCJtYWMiOiJlMGI1YzQ0YWQ3MDI0NzNmM2QzMTgzMzJkNmZkM2MzNTU5YTk5NDNlMmUzMDJkN2Y5ODQ5NmY4YWY0YTI4OTJjIiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 16:28:14 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6ImJNZEt3N3ZXZTMzZVU3TW9FaStpS0E9PSIsInZhbHVlIjoiL3pMUzArblhaMC9SY0dYZkkzd0ZhdEY2Q1dGMHp5TmtpbUo1TW91NXU3UjFvb3JSWURVRzF0Vm5tZUo1cEdXNDZKSmRFVmllUEkxSHBKQktuMWNyNThRRFRjZHpqaXN2SVBpcmhER1hEVVg1YjF2T1hrVWZ3R0JqeDBaY0ZVem4iLCJtYWMiOiJkMDYxYTE1ZWE1NTNjNWNlODllM2MyZGMxMGE3MDhkMmIwNjE1NjYzNmY1MGU5OWMwMWZjMGM4OWJjNzk2ZWM5IiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 16:28:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+            "vary": "Accept-Encoding"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_https://billetera.gruponeosistemas.com/registroUsuario",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "{\"success\":\"TRUE\",\"mensaje\":\"El usuario Matias1234 con el nro de persona 103 fue actualizado con exito.\"}",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "https://billetera.gruponeosistemas.com/registroUsuario",
+        "readyState": 4,
+        "responseHeaders": {
+            "Cache-Control": "no-cache, private",
+            "Content-Encoding": "gzip",
+            "Content-Length": "116",
+            "Content-Type": "application/json",
+            "Date": "Fri, 02 Aug 2024 14:28:14 GMT",
+            "Server": "Apache",
+            "Set-Cookie": "XSRF-TOKEN=eyJpdiI6IlY4WHJLRVVqWVY2b3FRNmluOHhDbUE9PSIsInZhbHVlIjoiMW96NUt3aTEwc0FQWUlLZW9kTHdBRmZXSW1TZks5Mi9FeFhEVXRkSVpZY1VLTS8xd0NzaWQxQW1qa09RVkQvMVY0dDIwSUxreFh3NFMvbStta1R0dlg2K2l2QXEvRlhoVHBHTk82ditlTEVKWGpHNXRLVEFxT0Q1L2pmbjFsaksiLCJtYWMiOiJlMGI1YzQ0YWQ3MDI0NzNmM2QzMTgzMzJkNmZkM2MzNTU5YTk5NDNlMmUzMDJkN2Y5ODQ5NmY4YWY0YTI4OTJjIiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 16:28:14 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6ImJNZEt3N3ZXZTMzZVU3TW9FaStpS0E9PSIsInZhbHVlIjoiL3pMUzArblhaMC9SY0dYZkkzd0ZhdEY2Q1dGMHp5TmtpbUo1TW91NXU3UjFvb3JSWURVRzF0Vm5tZUo1cEdXNDZKSmRFVmllUEkxSHBKQktuMWNyNThRRFRjZHpqaXN2SVBpcmhER1hEVVg1YjF2T1hrVWZ3R0JqeDBaY0ZVem4iLCJtYWMiOiJkMDYxYTE1ZWE1NTNjNWNlODllM2MyZGMxMGE3MDhkMmIwNjE1NjYzNmY1MGU5OWMwMWZjMGM4OWJjNzk2ZWM5IiwidGFnIjoiIn0%3D; expires=Fri, 02 Aug 2024 16:28:14 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+            "Vary": "Accept-Encoding"
+        },
+        "responseURL": "https://billetera.gruponeosistemas.com/registroUsuario",
+        "status": 200,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 200,
+    "statusText": undefined
+}

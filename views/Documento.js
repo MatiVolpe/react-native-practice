@@ -33,32 +33,40 @@ const Documento = ({ navigation }) => {
 
   const guardarDatos = async (datos, codigoGenerado) => {
     try {
+      console.log(JSON.stringify(datos));
       await AsyncStorage.setItem('datos_persona', JSON.stringify(datos));
-      await AsyncStorage.setItem('codigo_seguridad', codigoGenerado);
+      await AsyncStorage.setItem('codigo_seguridad', String(codigoGenerado));
     } catch {
-      console.log("Error guardar datos");
+      console.error("Error guardar datos");
     }
   };
 
+  // const generarCodigo = () => {
+  //   return '000000';
+  // };
+
   const generarCodigo = () => {
-    return '000000';
+    const min = 100000;
+    const max = 999999;
+    const randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    return randNum;
   };
+
 
   const enviarMensaje = async (telefono, codigoSeguridad) => {
     try {
       const responseMensaje = await axios.post(urlSms, {
         'numero_celular': `+54${telefono}`,
-        'mensaje': `Este es un mensaje de la BILLETERA Mutual Central SC, su código de verificación es ${codigoSeguridad} `,
+        'mensaje': `Su código de verificación es ${codigoSeguridad}. Este es un mensaje de la BILLETERA Mutual Central SC  `,
         'categoria': 'MutualCentralSC',
         'tipo': 1,
       });
-      console.log(responseMensaje);
     } catch (error) {
       console.error("Error al enviar el mensaje", error);
     }
   };
 
-  const validar_doc = async () => {
+  const validarDoc = async () => {
     try {
       spinnerStart();
       const responseValidar = await axios.post(urlTraductor, {
@@ -67,7 +75,7 @@ const Documento = ({ navigation }) => {
         'dir_api': '/homebanking/n_homebanking.asmx?WSDL',
         'metodo': 'validar_documento',
         'data': `{"empresa": "NEOPOSTMAN", "tipodoc": ${tipoDoc}, "nrodoc": ${documento}}`,
-      });
+      })
       const respuesta = responseValidar.data.data;
       if (respuesta.success === 'TRUE' && respuesta.data.encontrado === 1) {
         const telefonoValue = responseValidar.data.data.data.telefono_celular;
@@ -131,7 +139,7 @@ const Documento = ({ navigation }) => {
     if (documento.trim() === "" || socio.trim() === "") {
       snackHandler();
     } else {
-      validar_doc();
+      validarDoc();
     }
   };
 

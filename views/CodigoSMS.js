@@ -1,11 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { useEffect, useState, useRef } from 'react'
-import { Animated, Pressable, StyleSheet, View } from 'react-native'
+import { Animated, StyleSheet, View } from 'react-native'
 import { Button, HelperText, Snackbar, Text, TextInput } from 'react-native-paper'
 import CountDownTimer from 'react-native-countdown-timer-hooks';
 
 
-const CodigoSMS = ({navigation}) => {
+const CodigoSMS = ({ navigation }) => {
 
   const [datos, setDatos] = useState('');
   const [codigo, setCodigo] = useState('');
@@ -14,6 +14,9 @@ const CodigoSMS = ({navigation}) => {
   const [animacionboton2] = useState(new Animated.Value(1));
   const [mostrarSnackCorrecto, setMostrarSnackCorrecto] = useState(false);
   const [mostrarSnackErroneo, setMostrarSnackErroneo] = useState(false);
+  const [sinTiempo, setSinTiempo] = useState(false);
+  const [prueba, setPrueba] = useState(false);
+  
 
 
   const pressBtn = () => {
@@ -62,9 +65,7 @@ const CodigoSMS = ({navigation}) => {
   }, [])
 
   const handleClick = () => {
-    console.log(codigo);
-    console.log(codigoComparar);
-    if(codigo === codigoComparar){
+    if (codigo === codigoComparar) {
       setMostrarSnackCorrecto(true);
       setTimeout(() => {
         setMostrarSnackCorrecto(false);
@@ -78,6 +79,11 @@ const CodigoSMS = ({navigation}) => {
     }
   }
 
+  const enviarDeNuevo = () => {
+    setTimerEnd(false);
+    refTimer.current.resetTimer();
+  }
+
   // Timer References
   const refTimer = useRef();
 
@@ -87,14 +93,27 @@ const CodigoSMS = ({navigation}) => {
   const timerCallbackFunc = () => {
     // Setting timer flag to finished
     setTimerEnd(true);
+    setSinTiempo(true);
+    setTimeout(() => {
+      setSinTiempo(false);
+    }, 2000);
   };
+
+  const timerOnProgressFunc = (segundos) => {
+    if(segundos){
+      setPrueba(true);
+    } else {
+      setPrueba(false);
+    }
+  }
 
   return (
     <View style={styles.contenedor}>
+      
       <View>
         <Text variant='headlineMedium' style={styles.titulo}>Te enviamos un código por SMS</Text>
         <View>
-          <Text variant='headlineSmall' style={styles.texto}>Introducir código:</Text>
+          <Text variant='headlineSmall' style={styles.texto}>Introducir código: {String(prueba)}</Text>
         </View>
       </View>
       <View style={styles.vista}>
@@ -110,14 +129,29 @@ const CodigoSMS = ({navigation}) => {
         <HelperText type="error" visible={false}>
           Este campo es obligatorio
         </HelperText>
-        <View style={[styles.vista, { flexDirection: 'row', alignItems: 'center' }]}>
-          <View style={styles.countdownView}>
+        <View style={[styles.vista, { flexDirection: 'row', alignItems: 'center', paddingLeft: 20 }]}>
+        <View>
+            <Text style={{ marginBottom: 5 }}>¿No recibiste el mensaje?</Text>
+            <Animated.View style={estiloAnimacionInicio}>
+              <Button
+                mode='elevated'
+                style={{ borderRadius: 5 }}
+                onPressIn={pressBtn}
+                onPressOut={soltarBtn}
+                onPress={enviarDeNuevo}
+              >
+                <Text>Volver a enviar</Text>
+              </Button>
+            </Animated.View>
+          </View>
+          <View style={[styles.countdownView, {display: !prueba ? "none" : "flex"}]}>
             <CountDownTimer
               ref={refTimer}
-              timestamp={120}
+              timestamp={90}
               timerCallback={timerCallbackFunc}
+              timerOnProgress={timerOnProgressFunc}
               containerStyle={{
-                height: 56,
+                height: 50,
                 width: 120,
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -132,19 +166,6 @@ const CodigoSMS = ({navigation}) => {
               }}
             />
           </View>
-          <View>
-            <Text style={{ marginBottom: 5 }}>¿No recibiste el mensaje?</Text>
-            <Animated.View style={estiloAnimacionInicio}>
-              <Button
-                mode='elevated'
-                style={{ borderRadius: 5 }}
-                onPressIn={pressBtn}
-                onPressOut={soltarBtn}
-              >
-                <Text>Volver a enviar</Text>
-              </Button>
-            </Animated.View>
-          </View>
         </View>
       </View>
       <Animated.View style={[styles.vista, estiloAnimacionInicio2]}>
@@ -154,21 +175,27 @@ const CodigoSMS = ({navigation}) => {
           mode='elevated'
           onPressIn={pressBtn2}
           onPressOut={soltarBtn2}
+          disabled= {!prueba}
         >
           <Text style={styles.botonTexto}>confirmar</Text>
         </Button>
       </Animated.View>
-
+              
       <Snackbar
-          visible={mostrarSnackCorrecto}
-        >
-          Código correcto.
-        </Snackbar>
-        <Snackbar
-          visible={mostrarSnackErroneo}
-        >
-          El código no coincide.
-        </Snackbar>
+        visible={mostrarSnackCorrecto}
+      >
+        Código correcto.
+      </Snackbar>
+      <Snackbar
+        visible={mostrarSnackErroneo}
+      >
+        El código no coincide.
+      </Snackbar>
+      <Snackbar
+        visible={sinTiempo}
+      >
+        Se terminó el tiempo.
+      </Snackbar>
     </View>
   )
 }
@@ -218,8 +245,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 25,
-
-  }
+  },
 })
 
 export default CodigoSMS

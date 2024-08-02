@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { useEffect } from 'react';
 import {
+  AccessibilityInfo,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -43,6 +44,9 @@ const App = () => {
         await AsyncStorage.setItem('id_sucursal', '1');
         await AsyncStorage.setItem('url_traductor', 'https://traductor.gruponeosistemas.com/n_hbconfig');
         await AsyncStorage.setItem('url_sms', 'https://billetera.gruponeosistemas.com/sms');
+        await AsyncStorage.setItem('url_usuario', 'https://billetera.gruponeosistemas.com/registroUsuario');
+        await AsyncStorage.setItem('url_email', 'https://billetera.gruponeosistemas.com/mail');
+        await AsyncStorage.setItem('url_login', 'https://billetera.gruponeosistemas.com/consultaUsuarioLoginNewp');
       }
       catch {
         console.error(error);
@@ -107,14 +111,47 @@ const App = () => {
           <Stack.Screen
             name="NombreUsuario"
             component={NombreUsuario}
+            options={{
+              headerStyle: {
+                backgroundColor: '#ddede7'
+              },
+              headerBackTitle: 'Atrás',
+              headerTitle: '',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 24
+              }
+            }}
           />
           <Stack.Screen
             name="EmailTemporal"
             component={EmailTemporal}
+            options={{
+              headerStyle: {
+                backgroundColor: '#ddede7'
+              },
+              headerBackTitle: 'Atrás',
+              headerTitle: '',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 24
+              }
+            }}
           />
           <Stack.Screen
             name="CambiarContraseña"
             component={CambiarContraseña}
+            options={{
+              headerStyle: {
+                backgroundColor: '#ddede7'
+              },
+              headerBackTitle: 'Atrás',
+              headerTitle: '',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 24
+              }
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

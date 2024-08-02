@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, { useEffect, useState } from 'react'
 import { StyleSheet, View, Animated, Image } from 'react-native'
-import { Button, HelperText, Text, TextInput } from 'react-native-paper'
+import { Button, HelperText, Snackbar, Text, TextInput } from 'react-native-paper'
 
 const Login = ({navigation}) => {
 
@@ -10,7 +11,28 @@ const Login = ({navigation}) => {
   const [errorUsuario, setErrorUsuario] = useState(false);
   const [errorContra, setErrorContra] = useState(false);
   const [animacionRegistro] = useState(new Animated.Value(1));
+  const [mostrarSnack, setMostrarSnack] = useState(false);
+  const [urlLogin, setUrlLogin] = useState('');
 
+  useEffect(() => {
+    const setUrl = async () => {
+      const url_login = await AsyncStorage.getItem('url_login');
+      setUrlLogin(url_login);
+    }
+    setUrl();
+  }, [])
+
+
+  const inicioSesion = async () => {
+    try {
+      const response = await axios.post(urlLogin, {
+        
+      })
+      console.log(response);
+    } catch(error) {
+
+    }
+  }
 
   const pressBtn = () => {
     Animated.spring(animacionboton, {
@@ -44,9 +66,18 @@ const Login = ({navigation}) => {
   }
   const handleInicio = () => {
     if (usuario.trim() === "" || contraseña.trim() === "") {
-
+      snackHandler();
+    } else {
+      inicioSesion();
     }
   }
+
+  const snackHandler = () => {
+    setMostrarSnack(true);
+    setTimeout(() => {
+      setMostrarSnack(false);
+    }, 2000);
+  };
 
   const handleRegistro = () => {
     navigation.navigate("Documento")
@@ -155,6 +186,11 @@ const Login = ({navigation}) => {
           </Button>
         </Animated.View>
       </View>
+      <Snackbar
+          visible={mostrarSnack}
+        >
+          No puede haber campos vacios.
+        </Snackbar>
     </View>
   )
 }
