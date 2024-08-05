@@ -3,9 +3,10 @@ import React, { useEffect, useState, useRef } from 'react'
 import { Animated, StyleSheet, View } from 'react-native'
 import { Button, HelperText, Snackbar, Text, TextInput } from 'react-native-paper'
 import CountDownTimer from 'react-native-countdown-timer-hooks';
+import axios from 'axios';
 
 
-const CodigoSMS = ({ navigation }) => {
+const CodigoSMS = ({ navigation, route }) => {
 
   const [datos, setDatos] = useState('');
   const [codigo, setCodigo] = useState('');
@@ -16,8 +17,9 @@ const CodigoSMS = ({ navigation }) => {
   const [mostrarSnackErroneo, setMostrarSnackErroneo] = useState(false);
   const [sinTiempo, setSinTiempo] = useState(false);
   const [prueba, setPrueba] = useState(false);
+  const [disabledd, setDisabledd] = useState(false);
   
-
+  const { urlSms, telefono, codigoGenerado } = route.params;
 
   const pressBtn = () => {
     Animated.spring(animacionboton, {
@@ -79,9 +81,27 @@ const CodigoSMS = ({ navigation }) => {
     }
   }
 
-  const enviarDeNuevo = () => {
+  const enviarDeNuevo = async () => {
     setTimerEnd(false);
+    setDisabledd(true);
     refTimer.current.resetTimer();
+    try {
+      console.log(urlSms);
+      console.log(telefono);
+      console.log(codigoGenerado);
+      const responseMensaje = await axios.post(urlSms, {
+        'numero_celular': `+54${telefono}`,
+        'mensaje': `Su código de verificación es ${codigoGenerado}. Este es un mensaje de la BILLETERA Mutual Central SC  `,
+        'categoria': 'MutualCentralSC',
+        'tipo': 1,
+      })
+      console.log(responseMensaje);
+    } catch(error) {
+      console.error(error);
+    }
+    setTimeout(() => {
+      setDisabledd(false);
+    }, 10000);
   }
 
   // Timer References
@@ -113,7 +133,7 @@ const CodigoSMS = ({ navigation }) => {
       <View>
         <Text variant='headlineMedium' style={styles.titulo}>Te enviamos un código por SMS</Text>
         <View>
-          <Text variant='headlineSmall' style={styles.texto}>Introducir código: {String(prueba)}</Text>
+          <Text variant='headlineSmall' style={styles.texto}>Introducir código: </Text>
         </View>
       </View>
       <View style={styles.vista}>
@@ -135,10 +155,11 @@ const CodigoSMS = ({ navigation }) => {
             <Animated.View style={estiloAnimacionInicio}>
               <Button
                 mode='elevated'
-                style={{ borderRadius: 5 }}
+                style={{ borderRadius: 5, backgroundColor:'#FFF' }}
                 onPressIn={pressBtn}
                 onPressOut={soltarBtn}
                 onPress={enviarDeNuevo}
+                disabled={disabledd}
               >
                 <Text>Volver a enviar</Text>
               </Button>

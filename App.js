@@ -1,15 +1,6 @@
 import 'react-native-gesture-handler';
 import React, { useEffect } from 'react';
-import {
-  AccessibilityInfo,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { StyleSheet } from 'react-native';
 import { DefaultTheme, PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -20,6 +11,7 @@ import CodigoSMS from './views/CodigoSMS';
 import NombreUsuario from './views/NombreUsuario';
 import EmailTemporal from './views/EmailTemporal';
 import CambiarContraseña from './views/CambiarContraseña';
+import Finalizado from './views/Finalizado';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -141,6 +133,21 @@ const App = () => {
           <Stack.Screen
             name="CambiarContraseña"
             component={CambiarContraseña}
+            options={{
+              headerStyle: {
+                backgroundColor: '#ddede7'
+              },
+              headerBackTitle: 'Atrás',
+              headerTitle: '',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 24
+              }
+            }}
+          />
+          <Stack.Screen
+            name="Finalizado"
+            component={Finalizado}
             options={{
               headerStyle: {
                 backgroundColor: '#ddede7'

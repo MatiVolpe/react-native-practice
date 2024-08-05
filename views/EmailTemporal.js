@@ -6,9 +6,10 @@ import axios from 'axios'
 
 const EmailTemporal = ({ navigation, route }) => {
 
-  const { usuario } = route.params;
+  const { usuario, urlEmail, claveTemporal, correo, nombre, idMutual, idSucursal  } = route.params;
   const [animacionboton] = useState(new Animated.Value(1));
   const [animacionboton2] = useState(new Animated.Value(1));
+
 
 
   const handleInicio = () => {
@@ -32,7 +33,28 @@ const EmailTemporal = ({ navigation, route }) => {
 
   const enviarDeNuevo = async () => {
     try {
-      const response = await axios.post(urlEmail, opciones)
+      const response = await axios.post(urlEmail, {
+        'Mutual_nombre': 'Billetera Mutual Central SC',
+        'Mutual_logo': 'https://billetera.gruponeosistemas.com/logos/logoLoginSanCarlos.png',
+        'Mutual_sender': 'billetera@mutualcentral.com.ar',
+        'Plantilla_color': '#C14F5B',
+        'Socio_nombre': `${nombre}`,
+        'Socio_mail': `${correo}`,
+        'Asunto_mail': 'Registro de Usuario BILLETERA Mutual Central SC',
+        'Titulo': 'Clave de Acceso Provisoria',
+        'Link': '',
+        'Text1': 'Su nombre de usuario es',
+        'Contenido1': `${usuario}`,
+        'Text2': 'La clave provisoria es',
+        'Contenido2': `${claveTemporal}`,
+        'Text3': '',
+        'Contenido3': '',
+        'Text4': '',
+        'Contenido4': '',
+        'tipo': '1',
+        'id_mutual': `${idMutual}`,
+        'id_sucursal': `${idSucursal}`,
+      })
       console.log(response);
     } catch (error) {
       console.log("Error", error)

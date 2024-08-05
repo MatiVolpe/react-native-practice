@@ -22,6 +22,7 @@ const NombreUsuario = ({ navigation }) => {
   const [mostrarSnackExistente, setMostrarSnackExistente] = useState(false);
   const [vistaSpinner, setVistaSpinner] = useState(false);
   const [claveTemporal, setClaveTemporal] = useState('');
+  const [llamado, setLlamado] = useState(false);
 
 
   useEffect(() => {
@@ -52,7 +53,6 @@ const NombreUsuario = ({ navigation }) => {
 
     }
     getData();
-
   }, [])
 
 
@@ -92,7 +92,7 @@ const NombreUsuario = ({ navigation }) => {
         })
         console.log(claveTemporal);
         if (JSON.stringify(response2.data.success) === 'true') {
-          navigation.navigate('EmailTemporal', { usuario });
+          navigation.navigate('EmailTemporal', { usuario, urlEmail, claveTemporal, correo, nombre, idMutual, idSucursal });
         }
         spinnerStop();
       } else if (response.data.error.substring(0, 30) === 'Usuario ya existe en la Mutual') {
@@ -104,6 +104,13 @@ const NombreUsuario = ({ navigation }) => {
       spinnerStop();
     }
   }
+
+  useEffect(() => {
+    if(claveTemporal !== ''){
+      console.log("effect");
+      validarUsuario(); 
+    }
+  }, [claveTemporal])
 
   const generarCodigo = () => {
     const min = 100000;
@@ -117,7 +124,7 @@ const NombreUsuario = ({ navigation }) => {
       snackHandlerLongitud();
     } else {
       setClaveTemporal(generarCodigo());
-      validarUsuario();
+      // validarUsuario();
     }
   }
 

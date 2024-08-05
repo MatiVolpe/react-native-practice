@@ -1,0 +1,239 @@
+Login 2: {
+    "data": {
+        "data": {
+            "activo": 0,
+            "admin": 0,
+            "apellido": "",
+            "beneficio": "",
+            "billetera": 0,
+            "bloqueado": 0,
+            "cantidad_mensajes": 0,
+            "codcategoria": 0,
+            "codigoente": 0,
+            "comercio": 0,
+            "comercio_vende_billetera": 0,
+            "cuenta_amv_comercio": 0,
+            "dtohaberes": 0,
+            "email": "",
+            "encontrado": 0,
+            "es_comercio": 0,
+            "es_socio": 0,
+            "id_telefono": "",
+            "last_login": "1900-01-01 00:00:00",
+            "nombre": "",
+            "nombre_comercio": "",
+            "nombre_fantasia": "",
+            "nombreente": "Usuario: Matiasss Pass: 465457 Clave: 465457",
+            "nro_persona": 0,
+            "pass_ingreso": "",
+            "perfil_validado": 0,
+            "resetear": 0,
+            "socio": 0,
+            "telefono_celular": "",
+            "ultimo_cambio_clave": "1900-01-01 00:00:00",
+            "usr_ingreso": ""
+        },
+        "error": "",
+        "success": "TRUE",
+        "token": "Up6zTq7ySr8xRs9wQt.vP0:=O0aZN1bYM2cXL3dWK4eVJ5fUI6gTH7hSG8iRF9jQ"
+    }
+}
+Login 1: {
+    "config": {
+        "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+        ],
+        "data": "{\"encriptado\":\"NEOPOSTMAN\",\"usuario\":\"Matiasss\",\"mutual\":\"6\"}",
+        "env": {
+            "Blob": [Function Blob
+            ],
+            "FormData": [Function FormData
+            ]
+        },
+        "headers": [Object
+        ],
+        "maxBodyLength": -1,
+        "maxContentLength": -1,
+        "method": "post",
+        "timeout": 0,
+        "transformRequest": [
+            [Function transformRequest
+            ]
+        ],
+        "transformResponse": [
+            [Function transformResponse
+            ]
+        ],
+        "transitional": {
+            "clarifyTimeoutError": false,
+            "forcedJSONParsing": true,
+            "silentJSONParsing": true
+        },
+        "url": "https://billetera.gruponeosistemas.com/consultaUsuarioLoginNewp",
+        "validateStatus": [Function validateStatus
+        ],
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN"
+    },
+    "data": {
+        "GestDoc": 1,
+        "amv_cotitular": 1,
+        "billetera_amv": 1,
+        "billetera_amv_cotitular": 0,
+        "billetera_tarjeta_cabal": 0,
+        "billetera_tarjeta_propia": 1,
+        "bloqueo_billetera": 0,
+        "comercio_subtitulo": "Comercios",
+        "compra_qr": 1,
+        "compra_qr_universal": 0,
+        "confirmar_op_bille_cvu": 0,
+        "confirmar_op_bille_hb": 0,
+        "confirmar_op_bille_qr": 0,
+        "confirmar_ope_hb_web": 0,
+        "dir_cbtes": "CbtesMutualPruebas",
+        "direccion_mutual": "Rivadavia 680, San Carlos Centro",
+        "dto_haberes": 0,
+        "email_mutual": "mutualprueba@neoconsultores.ar",
+        "es_activo": 1,
+        "fechaFinMant": "2024-02-22 18:00:09",
+        "fechaInicioMant": "2024-02-22 17:00:09",
+        "id_mutual": 6,
+        "id_sucursal": 1,
+        "importes_tarjeta": 0,
+        "link_politicas_privacidad": "http://cashmutual.gruponeosistemas.com/privacidad/",
+        "login_fails": 3,
+        "logo": "logos/logoLogin.png",
+        "logo_billetera": "Imagenes/logoLoginGeneral.png",
+        "logo_billeteraLite": "Imagenes/logoLoginGeneralLite.png",
+        "logo_qr": "Imagenes/Tema0/logo_qr.png",
+        "logo_web": "Imagenes/Tema0/logoLogin.png",
+        "mailNotificacion": "0",
+        "mail_alta_asunto": "Registro de Usuario BILLETERA CASHMUTUAL - Mutual Central SC",
+        "mail_alta_mutual": "Billetera CashMutual - Mutual Central SC",
+        "mail_operacion_asunto": "Emision de Comprobante BILLETERA CASHMUTUAL - Mutual Central SC",
+        "mail_operacion_mutual": "Billetera Mutual Central SC",
+        "mail_qr_asunto": "Emisión de Código QR para el uso de la APP",
+        "mail_qr_mutual": "Mutual Central SC",
+        "mantenimiento": 0,
+        "mantenimiento_bille": 0,
+        "md5_id_mutual": "1679091c5a880faf6fb5e6087eb1b2dc",
+        "mensajeMant": [],
+        "mensaje_ope_cvu": "Las operaciones de transferencias CVU/CBU no estan operativas en la Mutual.",
+        "mensaje_ope_cvu_activa": "Estamos trabajando para mejorar la calidad y prestación del servicio. En breve la Billetera estará habilitada.",
+        "mensaje_ope_cvu_fallas": "Las operaciones de transferencias CVU/CBU, estan teniendo intermitencia por problemas ajenos a la Mutual, por favor verifique las transferencias realizadas.",
+        "nombre_corto": "CashMutual SC",
+        "nombre_mutual": "Mutual San Carlos",
+        "orden_resumen": 0,
+        "recibirNotificacionMail": 0,
+        "registroHB": 0,
+        "sms_alta": "Este es un mensaje de la App BILLETERA CASHMUTUAL - Mutual Central SC, código de verificación es ",
+        "sms_operacion": "Este es un mensaje de la App de BILLETERA CASHMUTUAL.Para ver su Comprobante",
+        "success": "TRUE",
+        "tarjetaSdoContado": "Sdo. Contado",
+        "tarjetaSdoCuotas": "Sdo. Cuotas",
+        "tarjeta_cabal": 0,
+        "theme_id": 2,
+        "tiene_billetera": 1,
+        "transferencia_cvu_cbu": 1,
+        "transferencia_cvu_cbu_activa": 1,
+        "transferencias_cbu_propios": 0,
+        "transferencias_cvu_descubierto": 0,
+        "transferencias_terceros": 1,
+        "url": "http://201.216.239.83:7846/homebanking/n_homebanking.asmx",
+        "urlDir": "http://201.216.239.83",
+        "urlPuerto": "7846",
+        "url_imagen_perfil": "https://traductor.gruponeosistemas.com/ImagenPerfil/Mutual-6-1/FotoPefil-103-6-1-14:47:45.jpg",
+        "usuario_habilitado": 1,
+        "validaCuit": 0,
+        "verAyudaTransitoria": 1,
+        "verConfeccionarAMT": 1,
+        "verInversiones": 1,
+        "verLocalizador": 0,
+        "verMensajeMant": 0,
+        "verMontoDescubierto": 1,
+        "verNumeroTarjeta": 0,
+        "verPagoServicios": 0,
+        "verSdoTarjeta": 1,
+        "verSimularPrestamo": 0,
+        "version_1": 2,
+        "version_2": 2,
+        "version_3": 0
+    },
+    "headers": {
+        "cache-control": "no-cache, private",
+        "content-encoding": "gzip",
+        "content-length": "1352",
+        "content-type": "application/json",
+        "date": "Mon, 05 Aug 2024 20:42:12 GMT",
+        "server": "Apache",
+        "set-cookie": [Array
+        ],
+        "vary": "Accept-Encoding"
+    },
+    "request": {
+        "DONE": 4,
+        "HEADERS_RECEIVED": 2,
+        "LOADING": 3,
+        "OPENED": 1,
+        "UNSENT": 0,
+        "_aborted": false,
+        "_cachedResponse": undefined,
+        "_hasError": false,
+        "_headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json"
+        },
+        "_incrementalEvents": false,
+        "_lowerCaseResponseHeaders": {
+            "cache-control": "no-cache, private",
+            "content-encoding": "gzip",
+            "content-length": "1352",
+            "content-type": "application/json",
+            "date": "Mon, 05 Aug 2024 20:42:12 GMT",
+            "server": "Apache",
+            "set-cookie": "XSRF-TOKEN=eyJpdiI6Im9ocnJCVHpFdFV4VEk3TFdaVFpxRWc9PSIsInZhbHVlIjoiWVdIVkFEcG5maU5LSEc3eEpqQmd0dExFWkp0c010UisyM3lGOEtlRkt5SzFzZmpTRGY4ak51YkJkVkV1Vkkxc01PWHhpODYxYUV1WFZBZXZVRTFuVU4vYlJya2psbU04MUhyYlovV090Ri9Rdi9tTFhJY3c0OHBXZWJrcExJMFMiLCJtYWMiOiI2YWQyMTdhMDJmNzgyZDA0ZTk5MjgzMWU1MTUyNjNjZWJhOWFlZWJlYzk5MWI2YTIwMTM5M2EwNmY2Mzk2NzA5IiwidGFnIjoiIn0%3D; expires=Mon, 05 Aug 2024 22:42:12 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6InJRb1Vna2hocnhOcVZQRFZlMy8zUXc9PSIsInZhbHVlIjoiWTFLTytLZ0tCSkg3bENkRC9sdTVxRlJXSWE5NmNFcmRLU1MzeG1QdkdnRERXd3lySjBraFZTa2h1OHJUT2RIaUdXUURrb0U0TUNvTUNEYWNkVW8wcTV4cFlwMmZCMDZ1a3IyNkNBSW1lUWUxM21rTHpxNVBLZUJPSWhDSGZxZDciLCJtYWMiOiJjNzc4ZDcwOGQ0OGY4NTY1NDE3MzkzNGI1MmJiYTNiMWFkNmUxNmI2OGM4OTMzZDg5YTZlM2RlNmFmYzVmOGNiIiwidGFnIjoiIn0%3D; expires=Mon, 05 Aug 2024 22:42:12 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+            "vary": "Accept-Encoding"
+        },
+        "_method": "POST",
+        "_perfKey": "network_XMLHttpRequest_https://billetera.gruponeosistemas.com/consultaUsuarioLoginNewp",
+        "_performanceLogger": {
+            "_closed": false,
+            "_extras": [Object
+            ],
+            "_pointExtras": [Object
+            ],
+            "_points": [Object
+            ],
+            "_timespans": [Object
+            ]
+        },
+        "_requestId": null,
+        "_response": "{\"success\":\"TRUE\",\"urlDir\":\"http:\\/\\/201.216.239.83\",\"urlPuerto\":\"7846\",\"usuario_habilitado\":1,\"id_mutual\":6,\"id_sucursal\":1,\"md5_id_mutual\":\"1679091c5a880faf6fb5e6087eb1b2dc\",\"nombre_mutual\":\"Mutual San Carlos\",\"es_activo\":1,\"direccion_mutual\":\"Rivadavia 680, San Carlos Centro\",\"email_mutual\":\"mutualprueba@neoconsultores.ar\",\"logo\":\"logos\\/logoLogin.png\",\"orden_resumen\":0,\"importes_tarjeta\":0,\"comercio_subtitulo\":\"Comercios\",\"dto_haberes\":0,\"login_fails\":3,\"amv_cotitular\":1,\"theme_id\":2,\"tarjeta_cabal\":0,\"transferencias_terceros\":1,\"transferencias_cbu_propios\":0,\"mantenimiento\":0,\"url\":\"http:\\/\\/201.216.239.83:7846\\/homebanking\\/n_homebanking.asmx\",\"tiene_billetera\":1,\"billetera_amv\":1,\"billetera_amv_cotitular\":0,\"billetera_tarjeta_propia\":1,\"billetera_tarjeta_cabal\":0,\"dir_cbtes\":\"CbtesMutualPruebas\",\"url_imagen_perfil\":\"https:\\/\\/traductor.gruponeosistemas.com\\/ImagenPerfil\\/Mutual-6-1\\/FotoPefil-103-6-1-14:47:45.jpg\",\"logo_web\":\"Imagenes\\/Tema0\\/logoLogin.png\",\"logo_billetera\":\"Imagenes\\/logoLoginGeneral.png\",\"logo_billeteraLite\":\"Imagenes\\/logoLoginGeneralLite.png\",\"logo_qr\":\"Imagenes\\/Tema0\\/logo_qr.png\",\"bloqueo_billetera\":0,\"transferencia_cvu_cbu\":1,\"transferencia_cvu_cbu_activa\":1,\"version_1\":2,\"version_2\":2,\"version_3\":0,\"confirmar_op_bille_qr\":0,\"confirmar_op_bille_cvu\":0,\"confirmar_op_bille_hb\":0,\"confirmar_ope_hb_web\":0,\"mantenimiento_bille\":0,\"mail_alta_mutual\":\"Billetera CashMutual - Mutual Central SC\",\"mail_alta_asunto\":\"Registro de Usuario BILLETERA CASHMUTUAL - Mutual Central SC\",\"mail_operacion_mutual\":\"Billetera Mutual Central SC\",\"mail_operacion_asunto\":\"Emision de Comprobante BILLETERA CASHMUTUAL - Mutual Central SC\",\"sms_alta\":\"Este es un mensaje de la App BILLETERA CASHMUTUAL - Mutual Central SC, c\\u00f3digo de verificaci\\u00f3n es \",\"sms_operacion\":\"Este es un mensaje de la App de BILLETERA CASHMUTUAL.Para ver su Comprobante\",\"mail_qr_mutual\":\"Mutual Central SC\",\"mail_qr_asunto\":\"Emisi\\u00f3n de C\\u00f3digo QR para el uso de la APP\",\"compra_qr\":1,\"link_politicas_privacidad\":\"http:\\/\\/cashmutual.gruponeosistemas.com\\/privacidad\\/\",\"nombre_corto\":\"CashMutual SC\",\"compra_qr_universal\":0,\"transferencias_cvu_descubierto\":0,\"verMontoDescubierto\":1,\"verAyudaTransitoria\":1,\"verSimularPrestamo\":0,\"verConfeccionarAMT\":1,\"recibirNotificacionMail\":0,\"mailNotificacion\":\"0\",\"GestDoc\":1,\"verSdoTarjeta\":1,\"tarjetaSdoContado\":\"Sdo. Contado\",\"tarjetaSdoCuotas\":\"Sdo. Cuotas\",\"verInversiones\":1,\"verPagoServicios\":0,\"verLocalizador\":0,\"registroHB\":0,\"verNumeroTarjeta\":0,\"verMensajeMant\":0,\"mensajeMant\":[],\"fechaInicioMant\":\"2024-02-22 17:00:09\",\"fechaFinMant\":\"2024-02-22 18:00:09\",\"mensaje_ope_cvu\":\"Las operaciones de transferencias CVU\\/CBU no estan operativas en la Mutual.\",\"mensaje_ope_cvu_activa\":\"Estamos trabajando para mejorar la calidad y prestaci\\u00f3n del servicio. En breve la Billetera estar\\u00e1 habilitada.\",\"mensaje_ope_cvu_fallas\":\"Las operaciones de transferencias CVU\\/CBU, estan teniendo intermitencia por problemas ajenos a la Mutual, por favor verifique las transferencias realizadas.\",\"validaCuit\":0}",
+        "_responseType": "",
+        "_sent": true,
+        "_subscriptions": [],
+        "_timedOut": false,
+        "_trackingName": "unknown",
+        "_url": "https://billetera.gruponeosistemas.com/consultaUsuarioLoginNewp",
+        "readyState": 4,
+        "responseHeaders": {
+            "Cache-Control": "no-cache, private",
+            "Content-Encoding": "gzip",
+            "Content-Length": "1352",
+            "Content-Type": "application/json",
+            "Date": "Mon, 05 Aug 2024 20:42:12 GMT",
+            "Server": "Apache",
+            "Set-Cookie": "XSRF-TOKEN=eyJpdiI6Im9ocnJCVHpFdFV4VEk3TFdaVFpxRWc9PSIsInZhbHVlIjoiWVdIVkFEcG5maU5LSEc3eEpqQmd0dExFWkp0c010UisyM3lGOEtlRkt5SzFzZmpTRGY4ak51YkJkVkV1Vkkxc01PWHhpODYxYUV1WFZBZXZVRTFuVU4vYlJya2psbU04MUhyYlovV090Ri9Rdi9tTFhJY3c0OHBXZWJrcExJMFMiLCJtYWMiOiI2YWQyMTdhMDJmNzgyZDA0ZTk5MjgzMWU1MTUyNjNjZWJhOWFlZWJlYzk5MWI2YTIwMTM5M2EwNmY2Mzk2NzA5IiwidGFnIjoiIn0%3D; expires=Mon, 05 Aug 2024 22:42:12 GMT; Max-Age=7200; path=/; secure; samesite=lax, laravel_session=eyJpdiI6InJRb1Vna2hocnhOcVZQRFZlMy8zUXc9PSIsInZhbHVlIjoiWTFLTytLZ0tCSkg3bENkRC9sdTVxRlJXSWE5NmNFcmRLU1MzeG1QdkdnRERXd3lySjBraFZTa2h1OHJUT2RIaUdXUURrb0U0TUNvTUNEYWNkVW8wcTV4cFlwMmZCMDZ1a3IyNkNBSW1lUWUxM21rTHpxNVBLZUJPSWhDSGZxZDciLCJtYWMiOiJjNzc4ZDcwOGQ0OGY4NTY1NDE3MzkzNGI1MmJiYTNiMWFkNmUxNmI2OGM4OTMzZDg5YTZlM2RlNmFmYzVmOGNiIiwidGFnIjoiIn0%3D; expires=Mon, 05 Aug 2024 22:42:12 GMT; Max-Age=7200; path=/; httponly; samesite=lax",
+            "Vary": "Accept-Encoding"
+        },
+        "responseURL": "https://billetera.gruponeosistemas.com/consultaUsuarioLoginNewp",
+        "status": 200,
+        "timeout": 0,
+        "upload": {},
+        "withCredentials": true
+    },
+    "status": 200,
+    "statusText": undefined
+}

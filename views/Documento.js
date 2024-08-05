@@ -41,9 +41,6 @@ const Documento = ({ navigation }) => {
     }
   };
 
-  // const generarCodigo = () => {
-  //   return '000000';
-  // };
 
   const generarCodigo = () => {
     const min = 100000;
@@ -85,7 +82,7 @@ const Documento = ({ navigation }) => {
         guardarDatos(respuesta, codigoGenerado);
         enviarMensaje(telefonoValue, codigoGenerado).then(() => {
           spinnerStop();
-          navigation.navigate('CodigoSMS');
+          navigation.navigate('CodigoSMS', { urlSms, telefono, codigoGenerado });
         }).catch(() => {
           spinnerStop();
           console.error("No pudo enviarse el SMS");

@@ -60,11 +60,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     rueda: {
-        marginTop: 60,
+        marginTop: 80,
     },
     vista: {
         marginHorizontal: 20,
-        marginTop: 20,
+        marginTop: 80,
+        maxHeight: 200
     },
     vistaAbajo: {
         position: 'fixed',
@@ -74,6 +75,7 @@ const styles = StyleSheet.create({
     },
     imagenArriba: {
         width: '100%',
+        maxHeight: 250,
         resizeMode: 'contain',
     },
     imagenAbajo: {
